@@ -1,8 +1,12 @@
 import React from "react";
 
+import { EmployeeBar } from "../styles"
+
 const EmployeeView = props => {
     return (
-        <h2>EmployeeView</h2>
+        <EmployeeBar>
+        EmployeeView            NameS
+        </EmployeeBar>
     )
 };
 
