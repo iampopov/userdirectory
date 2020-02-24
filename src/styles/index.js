@@ -24,4 +24,7 @@ border-bottom: 2px solid ${lightGray};
 border-top: 2px solid ${lightGray};
 margin-top: 5px;
 `
+export const EmployeeCardBar = styled.article`
+
+`
 

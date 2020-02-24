@@ -7,7 +7,14 @@ const EmployeeSearch = props => {
     return (
 
         <SearchBar>
-            <Input type="email" name="email" id="exampleEmail" placeholder="Search employee..." />
+            <Input
+             type="text"
+             name="searchTerm"
+             id="searchTerm"
+             placeholder="Search employee..."
+             onChange={props.handleInputChange}
+             value={props.searchTerm}
+             />
         </SearchBar>
     )
 };
