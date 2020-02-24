@@ -47,12 +47,12 @@ function App() {
       
       <Container>
         
-        <EmployeeView />
+        {/* <EmployeeView /> */}
           {data.map(record => (
             <EmployeeCard
             key={record.registered.date}
             id={record.registered.date}
-            image = {record.picture.thumbnail}
+            image = {record.picture.large}
             first = {record.name.first}
             last = {record.name.last}
             //phone = {(record.phone).replace(/\D/g,'').substring(0,10).match(/^(\d{3})(\d{3})(\d{4})$/)}
