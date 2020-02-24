@@ -7,6 +7,7 @@ import EmployeeView from "./components/EmployeeView";
 import EmployeeSearch from "./components/EmployeeSearch";
 import EmployeeCard from "./components/EmployeeCard";
 import sampleData from "./data/sample.json";
+import moment from 'moment';
 
 function App() {
   const [employee, setEmployee] = useState({
@@ -54,8 +55,10 @@ function App() {
             image = {record.picture.thumbnail}
             first = {record.name.first}
             last = {record.name.last}
-            phone = {record.phone}
+            //phone = {(record.phone).replace(/\D/g,'').substring(0,10).match(/^(\d{3})(\d{3})(\d{4})$/)}
+            phone={record.phone}
             email = {record.email}
+            //dob = {moment(record.dob, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]").format("dddd")} //{record.dob}
             dob = {record.dob}
             />
           ))}

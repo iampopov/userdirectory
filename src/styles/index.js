@@ -25,6 +25,18 @@ border-top: 2px solid ${lightGray};
 margin-top: 5px;
 `
 export const EmployeeCardBar = styled.article`
+.row {
+    margin-left: 1.5rem;
+}
+.Name {
+    width: 20rem;
+}
+
+img {
+    width: 48px;
+    heighth: 48px;
+}
+
 
 `
 

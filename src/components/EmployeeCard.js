@@ -2,12 +2,7 @@ import React from "react"; //, { Component }
 import { 
     Row,
     Col,
-    Card,
-    CardImg,
-    CardBody,
-    CardTitle,
-    CardSubtitle,
-    CardText
+
  } from "reactstrap";
 
 
@@ -34,46 +29,28 @@ const EmployeeCard = props => {
         <EmployeeCardBar isSelected={props.isSelected} onChange={props.selectedEmployee}>
                 
                 <Row>
-                <Col>
-                        <Card>
-                            <Row className="no-gutters">
-                            <Col>
-                                <img
-                                top
-                                src={props.image}
-                                alt={props.first}
-                                />
-                            </Col>
-                            <Col>
-                                <CardBody>
-                                <CardText>
-                                    Some quick example text to build on the card title and
-                                    make up the bulk of the card's content.
-                                </CardText>
-                                </CardBody>
-                            </Col>
-                            </Row>
-                        </Card>
-                        </Col>
-                    {/* <Col className="col">
+                    {/* <Col id="image"> */}
                     <img src={props.image} alt={props.first}/>
-                    </Col>
+                    {/* </Col>                 */}
 
-                    <Col className="col">
+
+                    <Col className="Name">
+                    <Row>
                     <p>{props.first} {props.last}</p>
+                    </Row>
                     </Col>
 
-                    <Col className="col">
+                    <Col>
                     <p>{props.phone}</p>
                     </Col>
 
-                    <Col className="col">
+                    <Col>
                     <p>{props.email}</p>
                     </Col>
 
-                    <Col className="col">
+                    <Col>
                     <p>{props.dob.date}</p>
-                    </Col> */}
+                    </Col>
                     
                 </Row>
                 
