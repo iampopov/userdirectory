@@ -21,14 +21,54 @@ function App() {
   const [employee, setEmployee] = useState({
     searchTerm: "",
     data: sampleData.results,
-    selectedEmployee: []
+    selectedEmployee: [],
+    searchResults: []
   })
 
-  const { searchTerm, data, selectedEmployee } = employee;
+  const { searchTerm, data, selectedEmployee, searchResults } = employee;
 
   const handleInputChange = e => {
-    const { name, value } = e.target;
-    setEmployee({ ...employee, [name]: value });
+    // const { name, value } = e.target;
+    const searchResults = data.filter(employee => employee.email.toLowerCase().includes(e.target.value.toLowerCase()));
+    setEmployee({ ...employee, searchResults, searchTerm: e.target.value});
+  }
+
+  const returnResults = () => {
+    if (searchResults.length) {
+
+      return searchResults.map(record => (
+        <EmployeeCard
+        key={record.registered.date}
+        id={record.registered.date}
+        image = {record.picture.large}
+        first = {record.name.first}
+        last = {record.name.last}
+        //phone = {(record.phone).replace(/\D/g,'').substring(0,10).match(/^(\d{3})(\d{3})(\d{4})$/)}
+        phone={record.phone}
+        email = {record.email}
+        dob = {moment(record.dob.date, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]").format("MMMM Do YYYY")} 
+        //dob = {record.dob.date}
+        />
+      ))
+    } else {
+
+      return data.map(record => (
+      <EmployeeCard
+      key={record.registered.date}
+      id={record.registered.date}
+      image = {record.picture.large}
+      first = {record.name.first}
+      last = {record.name.last}
+      //phone = {(record.phone).replace(/\D/g,'').substring(0,10).match(/^(\d{3})(\d{3})(\d{4})$/)}
+      phone={record.phone}
+      email = {record.email}
+      dob = {moment(record.dob.date, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]").format("MMMM Do YYYY")} 
+      //dob = {record.dob.date}
+      />
+    ))
+
+    }
+    
   }
 
   return (
@@ -44,29 +84,21 @@ function App() {
       />
       
       <Container>
-        
+        {returnResults()}
         {/* <EmployeeView /> */}
-         { searchTerm.length
+         {/* { searchTerm.length
          ?
-         (<p>{searchTerm}</p>)
+         (
+          <p>{searchTerm}</p>
+        //  data.filter(record => (
+        //    record.email.includes({searchTerm})
+        //    ))
+         )
          :
          (
-          data.map(record => (
-            <EmployeeCard
-            key={record.registered.date}
-            id={record.registered.date}
-            image = {record.picture.large}
-            first = {record.name.first}
-            last = {record.name.last}
-            //phone = {(record.phone).replace(/\D/g,'').substring(0,10).match(/^(\d{3})(\d{3})(\d{4})$/)}
-            phone={record.phone}
-            email = {record.email}
-            dob = {moment(record.dob.date, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]").format("MMMM Do YYYY")} 
-            //dob = {record.dob.date}
-            />
-          ))
-         )}
           
+         )}
+           */}
         
 
       </Container>
