@@ -47,19 +47,12 @@ const EmployeeCard = props => {
                         <Col md="8">
                             <CardBody>
                             <CardTitle><h2>{props.first} {props.last}</h2></CardTitle>
-                            {/* <CardSubtitle>
-                                </CardSubtitle> */}
                             <CardText>
-                                <p>Email is: {props.email}</p>
-                                <p>
-                                Phone number is {props.phone}
-                                </p>
+                                <li>Email is: {props.email}</li>
+                                <li>Phone number is {props.phone}</li>
+                                <li>Date of birthday is {props.dob.date}</li>
                             </CardText>
-                            <CardText>
-                                <p>
-                                Date of birthday is {props.dob.date}
-                                </p>
-                            </CardText>
+                            
                             </CardBody>
                         </Col>
                         </Row>

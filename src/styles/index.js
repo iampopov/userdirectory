@@ -34,5 +34,8 @@ export const EmployeeCardBar = styled.article`
 #ec {
     margin-top: 1rem;
 }
+li {
+    list-style: none;  
+}
 `
 

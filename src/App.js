@@ -13,7 +13,7 @@ function App() {
   const [employee, setEmployee] = useState({
     searchTerm: "",
     data: sampleData.results,
-    selectedEmployee: null
+    selectedEmployee: []
     // image: sampleData.results.picture.thumbnail,
     // first: sampleData.results.name.first,
     // last: sampleData.results.name.last,
