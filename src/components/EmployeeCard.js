@@ -27,7 +27,7 @@ import { EmployeeCardBar } from "../styles"
 // }
 
 const EmployeeCard = props => {
-    console.log(props);
+   // console.log(props);
     
     return (
         <Row>
@@ -50,7 +50,7 @@ const EmployeeCard = props => {
                             <CardText>
                                 <li>Email is: {props.email}</li>
                                 <li>Phone number is {props.phone}</li>
-                                <li>Date of birthday is {props.dob.date}</li>
+                                <li>Date of birthday is {props.dob}</li>
                             </CardText>
                             
                             </CardBody>
