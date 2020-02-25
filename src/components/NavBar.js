@@ -6,7 +6,7 @@ const NavBar = props => {
     return (
         <HeaderBar>
         <h1>Employee Directory</h1>
-        <p>Directions how to use the thing</p>
+        <p>Start typing firs or last name in the search box or scroll down to see all employees</p>
         </HeaderBar>
     )
 };
