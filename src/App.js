@@ -63,7 +63,6 @@ function App() {
       phone={record.phone}
       email = {record.email}
       dob = {moment(record.dob.date, "YYYY-MM-DD[T]HH:mm:ss.SSS[Z]").format("MMMM Do YYYY")} 
-      //dob = {record.dob.date}
       />
     ))
 
@@ -77,66 +76,13 @@ function App() {
       <EmployeeSearch
         searchTerm={searchTerm}
         handleInputChange={handleInputChange}
-       // isSelected={data === selectedEmployee} // i dont think i need this
-//        selectedEmployee={() => setEmployee({ ...employee, selectedEmployee: employee })}
-        // selectedEmployee={() => setEmployee({ ...employee, selectedEmployee: data.filter(el => el.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) })}
-
       />
       
       <Container>
         {returnResults()}
-        {/* <EmployeeView /> */}
-         {/* { searchTerm.length
-         ?
-         (
-          <p>{searchTerm}</p>
-        //  data.filter(record => (
-        //    record.email.includes({searchTerm})
-        //    ))
-         )
-         :
-         (
-          
-         )}
-           */}
-        
-
       </Container>
     </div>
   );
 }
 
 export default App;
-
-{/* <Row>
-{selectedEmployee ? (
-  <EmployeeCard
-  searchTerm={searchTerm}
-  handleInputChange={handleInputChange}
-  key={selectedEmployee.id.value}
-  image = {selectedEmployee.picture.thumbnail}
-  first = {selectedEmployee.name.first}
-  last = {selectedEmployee.name.last}
-  phone = {selectedEmployee.phone}
-  email = {selectedEmployee.email}
-  dob = {selectedEmployee.dob}
-  />
-) : (
-  data.map(record => (
-    <EmployeeCard 
-    searchTerm={searchTerm}
-    handleInputChange={handleInputChange}
-    key={record.id.value}
-    image = {record.picture.thumbnail}
-    first = {record.name.first}
-    last = {record.name.last}
-    phone = {record.phone}
-    email = {record.email}
-    dob = {record.dob}
-    
-  />
-  ))
-)}
-</Row>
-
- */}
