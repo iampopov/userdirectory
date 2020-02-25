@@ -3,7 +3,6 @@ import { Container } from "reactstrap"; //, Row, Col
 
 
 import NavBar from "./components/NavBar";
-import EmployeeView from "./components/EmployeeView";
 import EmployeeSearch from "./components/EmployeeSearch";
 import EmployeeCard from "./components/EmployeeCard";
 import sampleData from "./data/sample.json";
