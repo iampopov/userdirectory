@@ -20,11 +20,10 @@ function App() {
   const [employee, setEmployee] = useState({
     searchTerm: "",
     data: sampleData.results,
-    selectedEmployee: [],
     searchResults: []
   })
 
-  const { searchTerm, data, selectedEmployee, searchResults } = employee;
+  const { searchTerm, data, searchResults } = employee;
 
   const handleInputChange = e => {
     // const { name, value } = e.target;
